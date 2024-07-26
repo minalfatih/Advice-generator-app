@@ -1,0 +1,92 @@
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--Dark-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  position: relative;
+}
+main {
+  background-color: var(--Dark-Grayish-Blue);
+  padding: 40px;
+  border-radius: 15px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+main p {
+  color: var(--Neon-Green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 20px 0;
+}
+main .text p {
+  color: var(--Light-Cyan);
+  line-height: 1.4;
+  font-size: 28px;
+  font-weight: 800;
+}
+main .image {
+  margin: 40px 0 20px;
+}
+main .image .mobile {
+  display: none;
+}
+main .btn {
+  position: absolute;
+  bottom: -25px;
+  background-color: var(--Neon-Green);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s linear;
+}
+main .btn:hover {
+  box-shadow: 0px 0px 20px 0px var(--Neon-Green);
+  transform: rotate(180deg);
+}
+.attribution {
+  color: var(--Light-Cyan);
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: -100px;
+}
+.attribution a {
+  color: var(--Neon-Green);
+}
+@media (max-width: 500px) {
+  main {
+    width: 90%;
+  }
+  main .image {
+    margin: 20px 0;
+  }
+  main .image .desktop {
+    display: none;
+  }
+  main .image .mobile {
+    display: flex;
+  }
+}
